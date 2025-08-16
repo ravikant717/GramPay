@@ -18,11 +18,13 @@ app.use(
 app.use(cookieParser()); //allows to parse cookies
 app.use(express.json()); //Extract JSON data out of body used to use req.body
 
-//Routes goes here
-app.use("/api/auth", authRoutes);
 
 //Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   connectDB();
 });
+//Routes goes here
+app.use("/api/auth", authRoutes);
+
+
