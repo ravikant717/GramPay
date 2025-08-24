@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "../lib/axios";
 import toast from "react-hot-toast";
 import { create } from "zustand";
 //DRY PRINCIPLES
@@ -46,5 +46,5 @@ export const useAuthStore = create((set) => ({
     } finally {
       set({ isAuthenticating: false });
     }
-  }
+  },
 }));

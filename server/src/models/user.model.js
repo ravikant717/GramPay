@@ -20,6 +20,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    upiId: {
+      type: String, 
+      default: "", 
+      unique: true,    
+    }
   },
   {
     timestamps: true, //To show member since: GOOD PRACTICE

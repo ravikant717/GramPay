@@ -1,4 +1,4 @@
-import PhoneForm from '@/components/PhoneForm'
+import PhoneForm from '../components/PhoneForm'
 import React from 'react'
 
 const Signup = () => {

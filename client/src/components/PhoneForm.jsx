@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom'; // Use this for internal routing
-import { useAuthStore } from '@/store/useAuthStore';
+import { useAuthStore } from '../store/useAuthStore';
 import toast from 'react-hot-toast';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 

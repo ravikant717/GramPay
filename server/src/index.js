@@ -3,6 +3,8 @@ const app = express();
 import cors from "cors";
 import cookieParser from "cookie-parser"; //To deal with cookies
 import authRoutes from "./routes/auth.route.js"; // Importing the auth routes
+import paymentRoutes from "./routes/payment.route.js"; // Importing the payment routes
+import requestRoutes from "./routes/request.route.js"; // Importing the request routes
 import dotenv from "dotenv"; //Allows to use env variables
 import { connectDB } from "./lib/db.js";
 dotenv.config();
@@ -18,7 +20,6 @@ app.use(
 app.use(cookieParser()); //allows to parse cookies
 app.use(express.json()); //Extract JSON data out of body used to use req.body
 
-
 //Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
@@ -26,5 +27,5 @@ app.listen(PORT, () => {
 });
 //Routes goes here
 app.use("/api/auth", authRoutes);
-
-
+app.use("/api/payment", paymentRoutes);
+app.use("/api/request", requestRoutes);
